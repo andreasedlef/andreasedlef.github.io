@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPGM</title>
     <link href="styles/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
   </head>
   <header>
     <img id="logo" src="images/RPGM-logo.png" alt="Temporary RPGM logo">
@@ -17,7 +18,7 @@
       </div>
       <div>
         <button id="scene_button" onclick="sceneSetup()">Scene Setup</button>
-        <button id="random_meaning" onclick="setRandomMeaning()">Random Action + Subject</button>
+        <button id="meaning_button" onclick="setRandomMeaning()">Random Action + Subject</button>
       </div>
       <div>
         <select id="fate_odds">
@@ -40,10 +41,10 @@
         <button id="generate_npc">Random NPC</button>
       </div>
 -->
-      <div class="output">
-        <p id="output-text-1">Welcome to RPGM!</p>
-        <p id="output-text-2"></p>
-        <p id="output-text-3"></p>
+      <div class="output" id="div-output">
+        <p class="output-text" id="output-text-1">Welcome to RPGM!</p>
+        <p class="output-text"id="output-text-2"></p>
+        <p class="output-text"id="output-text-3"></p>
       </div>
     </div>
     <script src="scripts/main.js"></script>

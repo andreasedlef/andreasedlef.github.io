@@ -1,3 +1,7 @@
+body {
+  font-family: 'Space Mono', monospace;
+}
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
 
@@ -18,11 +22,25 @@
   }
 
   input[type=number]{
-      width: 40px;
+      width: 30px;
   }
 
   .output {
     display: block;
     margin-top: -20px;
+    width: 100%;
+    overflow: hidden;
   }
+
+.blink {
+  animation:blinkingText 0.2s;
+  animation-iteration-count: 2;
+}
+
+  }
+  @keyframes blinkingText{
+  	50% {	opacity: 0;	}
+  }
+
+
 }

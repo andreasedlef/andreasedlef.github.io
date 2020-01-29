@@ -279,9 +279,9 @@ function getRandomEventFocus() {
 };
 
 function getEventMeaning() {
-  let action = actionTable1[Math.floor(Math.random() * 100) + 1];
-  let subject = actionTable2[Math.floor(Math.random() * 100) + 1];
-  return `${action} + ${subject}`;
+  let action = actionTable1[Math.floor(Math.random() * 100)];
+  let subject = actionTable2[Math.floor(Math.random() * 100)];
+  return `${action} + ${'<br/>' + subject}`;
 };
 
 function getScene(chaos) {
@@ -290,9 +290,36 @@ function getScene(chaos) {
     return "Unchanged Scene";
   else {
     if (roll % 2 == 0)
-      return `Interrupt Scene: ${getEventMeaning()}`;
+      return `Interrupt Scene: ${'<br/>' + getEventMeaning()}`;
     else {
       return "Altered Scene";
     }
   }
 };
+
+
+//////////////////////////////////
+// ANIMATIONS + EVENT LISTENERS //
+//////////////////////////////////
+
+const button_scene = document.getElementById('scene_button');
+const button_meaning = document.getElementById('meaning_button');
+const button_fate = document.getElementById('fate_button');
+let output = document.getElementById('div-output');
+let blinkClass = 'blink';
+
+button_scene.addEventListener('click',function() {
+  output.classList.add(blinkClass);
+});
+
+button_meaning.addEventListener('click',function() {
+  output.classList.add(blinkClass);
+});
+
+button_fate.addEventListener('click',function() {
+  output.classList.add(blinkClass);
+});
+
+output.addEventListener('animationend',function() {
+  this.classList.remove(blinkClass);
+});
