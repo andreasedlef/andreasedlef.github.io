@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>RPGM</title>
+    <link href="styles/style.css" rel="stylesheet">
+  </head>
+  <header>
+    <img id="logo" src="images/RPGM-logo.png" alt="Temporary RPGM logo">
+    <!-- https://www.dafont.com/wkwkwk.font?text=RPGM&psize=l&back=theme -->
+  </header>
+  <body>
+    <div>
+      <div>
+        <label></<label for="chaos">Chaos Factor: </label>
+        <input id="chaos_value" type="number" value="5" min="1" max="9">
+      </div>
+      <div>
+        <button id="scene_button" onclick="sceneSetup()">Scene Setup</button>
+      </div>
+      <div>
+        <button id="random_meaning" onclick="setRandomMeaning()">Random Situation</button>
+      </div>
+      <div>
+        <select id="fate_odds">
+                <option value="0">Impossible</option>
+                <option value="1">No way</option>
+                <option value="2">Very unlikely</option>
+                <option value="3">Unlikely</option>
+                <option value="4" selected="selected">50/50</option>
+                <option value="5">Somewhat likely</option>
+                <option value="6">Likely</option>
+                <option value="7">Very likely</option>
+                <option value="8">Near sure thing</option>
+                <option value="9">A sure thing</option>
+                <option value="10">Has to be</option>
+            </select>
+        <button id="fate_button" onclick="fateCheck()">Fate Check</button>
+      </div>
+
+      <div>
+        <button id="generate_npc">Random NPC</button>
+      </div>
+    </div>
+    <div class="output">
+      <p id="output-text-1">Welcome to RPGM!</p>
+      <p id="output-text-2"></p>
+      <p id="output-text-3"></p>
+    </div>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
