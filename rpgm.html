@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPGM</title>
     <link href="styles/style.css" rel="stylesheet">
   </head>
@@ -10,16 +10,14 @@
     <!-- https://www.dafont.com/wkwkwk.font?text=RPGM&psize=l&back=theme -->
   </header>
   <body>
-    <div>
+    <div class="content-wrapper">
       <div>
-        <label></<label for="chaos">Chaos Factor: </label>
+        <label id="chaos_label">Chaos Factor: </label>
         <input id="chaos_value" type="number" value="5" min="1" max="9">
       </div>
       <div>
         <button id="scene_button" onclick="sceneSetup()">Scene Setup</button>
-      </div>
-      <div>
-        <button id="random_meaning" onclick="setRandomMeaning()">Random Situation</button>
+        <button id="random_meaning" onclick="setRandomMeaning()">Random Action + Subject</button>
       </div>
       <div>
         <select id="fate_odds">
@@ -37,15 +35,16 @@
             </select>
         <button id="fate_button" onclick="fateCheck()">Fate Check</button>
       </div>
-
+<!--
       <div>
         <button id="generate_npc">Random NPC</button>
       </div>
-    </div>
-    <div class="output">
-      <p id="output-text-1">Welcome to RPGM!</p>
-      <p id="output-text-2"></p>
-      <p id="output-text-3"></p>
+-->
+      <div class="output">
+        <p id="output-text-1">Welcome to RPGM!</p>
+        <p id="output-text-2"></p>
+        <p id="output-text-3"></p>
+      </div>
     </div>
     <script src="scripts/main.js"></script>
   </body>
